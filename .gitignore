@@ -1,0 +1,46 @@
+# Node.js dependencies
+/node_modules/
+/.pnp
+.pnp.*
+
+# Yarn & npm cache
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.npm
+
+# Testing
+/coverage/
+
+# Next.js build & output
+/.next/
+/out/
+/build/
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Production & deployment
+/.vercel/
+.vercel/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Log files & debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables (Do NOT commit sensitive files)
+.env*
+
