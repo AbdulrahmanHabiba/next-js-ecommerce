@@ -38,10 +38,18 @@ const SuccessPage = () => {
                     {isSuccess ? "Payment Successful! 🎉" : "Payment Failed ❌"}
                 </h1>
                 <p className="mt-4 text-gray-600 text-lg">
-                    {isSuccess
-                        ? "Thank you for your purchase. Your order has been processed successfully."
-                        : "Something went wrong with your payment. Please try again."}
+                    {isSuccess ? (
+                        <>
+                            Thank you for your purchase. Your order has been processed successfully.
+                            <span className="block text-blue-500 mt-2 font-semibold text-sm shadow">
+                You will receive an email with your order shortly.
+            </span>
+                        </>
+                    ) : (
+                        "Something went wrong with your payment. Please try again."
+                    )}
                 </p>
+
 
                 <Link
                     href="/"

@@ -10,7 +10,8 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHER_KEY as
 
 const Page = () => {
     const [clientSecret, setClientSecret] = useState<string | null>(null);
-    const amount:number =Math.round(useSearchParams().get('amount'))
+    let amount:number = Number(useSearchParams().get('amount'))
+    amount = Math.round(amount)
 
     useEffect(() => {
         fetch("/api/create-intent", {
@@ -31,6 +32,8 @@ const Page = () => {
         : null;
 
 
+
+    // @ts-ignore
     return (
         <div>
             {clientSecret ? (

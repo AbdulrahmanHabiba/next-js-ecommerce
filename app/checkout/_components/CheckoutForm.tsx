@@ -4,6 +4,7 @@ import {useUser} from "@clerk/nextjs";
 import useCartContext from "@/app/_hooks/useCartContext";
 import createOrder from "@/app/_utils/orderApis";
 import {deleteCartItem} from "@/app/_utils/cartApis";
+import {useEffect, useState} from "react";
 
 const CheckoutForm = ({clientSecret, amount}: { clientSecret: string; amount: number }) => {
     const stripe = useStripe();
@@ -78,8 +79,6 @@ const handleSubmit = async (event: React.FormEvent) => {
 
 return (
     <form onSubmit={handleSubmit}>
-        <div onClick={()=> sendEmail(userName, userEmail)}
-            className="h-3 w-3 bg-black"></div>
         <div className="container mx-auto p-5 max-w-[900px]">
             <PaymentElement/>
             <button
