@@ -37,7 +37,7 @@ const Page = () => {
     return (
         <div>
             {clientSecret ? (
-                <Elements stripe={stripePromise} options={options}>
+                <Elements stripe={stripePromise} options={options as object}>
                     <CheckoutForm clientSecret={clientSecret} amount={amount} />
                 </Elements>
             ) : (

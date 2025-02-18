@@ -46,7 +46,11 @@ export interface CartItem {
        id?: number;
        username : string ;
        email : string ;
-       products: { id: number }[];
+       products: {
+           price: number;
+           title: string;
+           bannar: any; id: number
+       }[];
 }
 
 export interface CartContextTypes {

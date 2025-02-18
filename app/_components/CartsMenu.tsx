@@ -26,7 +26,7 @@ const CartsMenu = ({toggleMenuCart} : {toggleMenuCart : () => void}) => {
                             return (
                                 <li key={cartItem?.id} className="flex items-center gap-3 border-b pb-3 last:border-b-0">
                                     <Image
-                                        src={product?.bannar?.formats.small.url}
+                                        src={product?.bannar?.formats?.small?.url}
                                         alt={product?.title}
                                         width={80}
                                         height={50}

@@ -28,6 +28,7 @@ const CheckoutForm = ({clientSecret, amount}: { clientSecret: string; amount: nu
                 await Promise.all(cart.map((item) => deleteCartItem(item.id)));
             }
         } catch (error) {
+            // @ts-ignore
             console.error("Error creating order:", error?.response?.data || error);
         }
     };
@@ -53,6 +54,7 @@ const handleSubmit = async (event: React.FormEvent) => {
 
     await CreateOrder();
 
+    // @ts-ignore
     await sendEmail(userName, userEmail);
     const {error: submitError} = await elements.submit();
     if (submitError) {
@@ -60,6 +62,7 @@ const handleSubmit = async (event: React.FormEvent) => {
         return;
     }
 
+    // @ts-ignore
     const {paymentIntent, error} = await stripe.confirmPayment({
         elements,
         clientSecret,
