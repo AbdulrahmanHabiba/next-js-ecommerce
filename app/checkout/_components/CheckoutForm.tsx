@@ -4,7 +4,6 @@ import {useUser} from "@clerk/nextjs";
 import useCartContext from "@/app/_hooks/useCartContext";
 import createOrder from "@/app/_utils/orderApis";
 import {deleteCartItem} from "@/app/_utils/cartApis";
-import {useEffect, useState} from "react";
 
 const CheckoutForm = ({clientSecret, amount}: { clientSecret: string; amount: number }) => {
     const stripe = useStripe();
