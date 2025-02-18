@@ -11,7 +11,7 @@ import {
     Text,
 } from '@react-email/components';
 import * as React from 'react';
-
+import { Properties } from 'csstype';
 
 export const EmailTemplate = ({
                                   fullName,
@@ -35,15 +35,14 @@ export const EmailTemplate = ({
                     Thank you purchasing on abdo Tech Ecommerce. Click on Below download button to download the all digital content
                 </Text>
                 <Section style={btnContainer}>
-                    <Button pX={12} pY={12}
-                            style={{
-                                padding: 5,
-                                paddingLeft: 10,
-                                paddingRight: 10,
-
-
-                            }}
-                            href="https://res.cloudinary.com/dnvlh7gm3/image/upload/v1739570641/Advanced-Diploma-in-Software-Programing_fvq52n.jpg">
+                    <Button
+                        style={{
+                            padding: 12,
+                            paddingLeft: 10,
+                            paddingRight: 10,
+                        }}
+                        href="https://res.cloudinary.com/dnvlh7gm3/image/upload/v1739570641/Advanced-Diploma-in-Software-Programing_fvq52n.jpg"
+                    >
                         Download
                     </Button>
                 </Section>
@@ -80,7 +79,7 @@ const paragraph = {
     lineHeight: '26px',
 };
 
-const btnContainer = {
+const btnContainer:Properties = {
     textAlign: 'center',
 };
 
