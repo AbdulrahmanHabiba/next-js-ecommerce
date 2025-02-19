@@ -16,7 +16,7 @@ This is a **fully dynamic** e-commerce application built with **Next.js** and po
 - **Secure Payments:** Integrated with **Stripe** for seamless transactions.
 - **Email Notifications:** Uses **React Email** to send order confirmations.
 - **Smooth Animations:** Implemented with **Framer Motion** for an enhanced user experience.
-- **Modern UI Components:** Utilizes **Tailwind CSS**, **Radix UI**, and **Hyper UI**.
+- **Modern UI Components:** Utilizes **Tailwind CSS** and **Hyper UI**.
 
 ## Tech Stack
 
@@ -31,7 +31,7 @@ This is a **fully dynamic** e-commerce application built with **Next.js** and po
 - **Hyper UI** (UI components)
 - **Framer Motion** (Animations)
 - **Resend** (Email delivery service)
-- **React Icons** (Icon library)
+- **Lucide Icons** (Icon library)
 
 ## Installation & Setup
 
