@@ -2,9 +2,9 @@
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-const SuccessPage = () => {
+const SuccessContent = () => {
     const searchParams = useSearchParams();
     const status = searchParams.get("redirect_status");
     const isSuccess = status === "succeeded";
@@ -42,14 +42,13 @@ const SuccessPage = () => {
                         <>
                             Thank you for your purchase. Your order has been processed successfully.
                             <span className="block text-blue-500 mt-2 font-semibold text-sm shadow">
-                You will receive an email with your order shortly.
-            </span>
+                                You will receive an email with your order shortly.
+                            </span>
                         </>
                     ) : (
                         "Something went wrong with your payment. Please try again."
                     )}
                 </p>
-
 
                 <Link
                     href="/"
@@ -59,6 +58,14 @@ const SuccessPage = () => {
                 </Link>
             </div>
         </div>
+    );
+};
+
+const SuccessPage = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <SuccessContent />
+        </Suspense>
     );
 };
 

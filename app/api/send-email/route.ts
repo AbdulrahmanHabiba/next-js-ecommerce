@@ -11,7 +11,7 @@ export async function POST(req: Request) {
             return Response.json({ error: "Missing name or email" }, { status: 400 });
         }
 
-        const { data, error } = await resend.emails.send({
+        const { data , error } = await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: [email],
             subject: 'Hello world',
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
         }
 
         return Response.json({ success: true, data });
-    } catch (error) {
+    } catch (error : any) {
         return Response.json({ error: error.message }, { status: 500 });
     }
 }

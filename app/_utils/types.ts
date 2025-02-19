@@ -47,6 +47,7 @@ export interface CartItem {
        username : string ;
        email : string ;
        products: {
+           category: string;
            price: number;
            title: string;
            bannar: any; id: number

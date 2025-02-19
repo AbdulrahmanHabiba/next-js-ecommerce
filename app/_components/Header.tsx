@@ -51,7 +51,6 @@ const Header = () => {
         if (user) {
             getUserCarts(user.emailAddresses[0].emailAddress)
                 .then((res) => {
-                    console.log("Fetched cart data:", res.data.data);
                     setCart(res.data.data);
                 })
                 .catch((error) => {
@@ -75,7 +74,7 @@ const Header = () => {
                     <nav className="hidden md:block">
                         <ul className="flex items-center gap-6 text-sm font-semibold">
                             <li>
-                                <a className="text-primary hover:text-primary/75" href="#">Home</a>
+                                <Link className="text-primary hover:text-primary/75" href="/">Home</Link>
                             </li>
                             <li>
                                 <a className="text-primary hover:text-primary/75" href="#">Explore</a>
@@ -115,7 +114,7 @@ const Header = () => {
                                     <CartsMenu toggleMenuCart={toggleMenuCart} />
                                 </div>
                             )}
-                           <p onClick={toggleMenuCart} className="flex"><ShoppingCart /> ({cart?.length})</p>
+                           <p onClick={toggleMenuCart} className="flex cursor-pointer"><ShoppingCart /> ({cart?.length})</p>
                             <UserButton />
 
                         </div>}

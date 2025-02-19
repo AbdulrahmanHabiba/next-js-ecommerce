@@ -4,7 +4,6 @@ import useCartContext from "@/app/_hooks/useCartContext";
 import Image from "next/image";
 import {Trash2} from "lucide-react";
 import {deleteCartItem} from "@/app/_utils/cartApis";
-import Link from "next/link";
 import {useRouter} from "next/navigation";
 
 const Page = () => {
@@ -42,8 +41,8 @@ const Page = () => {
                 {cart.length > 0 ? (
                     <ul className="space-y-4 max-h-[400px] overflow-y-auto">
                         {cart.map((cartItem) => {
-                            const product = cartItem?.products?.[0]; // التأكد من أن products موجودة ولها بيانات
-                            if (!product) return null; // تجاوز العنصر إذا لم يكن هناك منتج
+                            const product = cartItem?.products?.[0];
+                            if (!product) return null;
 
                             return (
                                 <li key={cartItem.id} className="flex items-center gap-4 border-b pb-4 last:border-b-0">
@@ -62,7 +61,7 @@ const Page = () => {
                                     </div>
 
                                     <button
-                                        onClick={() => handleDeleteItem(cartItem.id)}
+                                        onClick={() => handleDeleteItem(cartItem.id as number)}
                                         className="text-gray-500 hover:text-red-600 transition">
                                         <Trash2 size={18}/>
                                     </button>

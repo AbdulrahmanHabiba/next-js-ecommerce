@@ -4,7 +4,6 @@ import { getProductByCategory, getProductById } from "@/app/_utils/productApis";
 import { Product } from "@/app/_utils/types";
 import ProductDetails from "@/app/product-details/[id]/ProductDetails";
 import ProductItem from "@/app/_components/(products)/ProductItem";
-import SkeletonBox from "@/app/_components/SkeletonBox"; // إضافة SkeletonBox
 
 const Page = ({ params }: any) => {
     const resolvedParams : any = use(params);

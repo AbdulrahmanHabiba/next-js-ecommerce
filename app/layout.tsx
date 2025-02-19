@@ -22,13 +22,13 @@ export default function RootLayout({children,}: Readonly<{
         <ClerkProvider>
             <html lang="en" >
                 <body
-                    className={`antialiased relative  `}
+                    className="antialiased relative flex flex-col min-h-screen"
                 >
-                    <ClientWrapper>
-                        <Header/>
-                         {children}
-                        <Footer/>
-                    </ClientWrapper>
+                <ClientWrapper>
+                    <Header/>
+                    <main className="flex-grow">{children}</main>
+                    <Footer/>
+                </ClientWrapper>
                 </body>
             </html>
         </ClerkProvider>

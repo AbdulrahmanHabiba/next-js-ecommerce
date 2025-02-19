@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Linkedin, Facebook, Github, MessageCircle } from "
 
 export default function Footer() {
         return (
-            <footer className="bg-gray-50 w-full p-4 mt-4 shadow-md">
+            <footer id="Footer" className="bg-gray-50 w-full p-4 mt-4 shadow-md ">
                     <div className="max-w-screen-lg mx-auto flex gap-6 justify-center   ">
                             {/* Company Info */}
                             <div className="flex flex-col sm:flex-row gap-6 justify-between  ">
