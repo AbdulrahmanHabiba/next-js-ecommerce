@@ -59,8 +59,7 @@ const ProductDetails = ({ product, loading }: ProductDetailsProps) => {
         return (
             <div className="my-3">
                 <div className="title relative">
-                    <SkeletonBox width={400} height={250}  className="mb-6 pb-3" />
-                    <span className="absolute -bottom-px h-0.5 w-[70%] bg-gradient-to-r from-red-700 to-red-100 rounded-2xl"></span>
+                    <span className="absolute pt-5 mt-3 -bottom-px h-0.5 w-[70%] bg-gradient-to-r from-red-700 to-red-100 rounded-2xl"></span>
                 </div>
                 <div className="flex justify-between items-center gap-6 flex-col lg:flex-row">
                     <div className="banner">
