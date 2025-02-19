@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js E-Commerce Application
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is a **fully dynamic** e-commerce application built with **Next.js** and powered by a **Strapi** backend. The platform allows users to browse programming courses, add them to their cart, and complete purchases using secure payment methods. The application provides a seamless shopping experience with a modern UI/UX.
+
+## Live Demo
+
+🔗 [Live Application](https://next-js-ecommerce-liard.vercel.app/)
+
+## Features
+
+- **User Authentication:** Powered by **Clerk**, enabling account registration and login.
+- **Product Management:** Browse and purchase programming courses.
+- **Cart System:** Add and remove courses dynamically.
+- **Secure Payments:** Integrated with **Stripe** for seamless transactions.
+- **Email Notifications:** Uses **React Email** to send order confirmations.
+- **Smooth Animations:** Implemented with **Framer Motion** for an enhanced user experience.
+- **Modern UI Components:** Utilizes **Tailwind CSS**, **Radix UI**, and **Hyper UI**.
+
+## Tech Stack
+
+- **Next.js** (App Router)
+- **Strapi** (Headless CMS Backend)
+- **TypeScript** (Strongly typed environment)
+- **SQLite** (Database for Strapi)
+- **Clerk** (User authentication)
+- **Stripe** (Online payments)
+- **React Email** (Email notifications)
+- **Tailwind CSS** (Styling framework)
+- **Hyper UI** (UI components)
+- **Framer Motion** (Animations)
+- **Resend** (Email delivery service)
+- **React Icons** (Icon library)
+
+## Installation & Setup
+
+To run this project locally, follow these steps:
+
+### 1. Clone the Repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/AbdulrahmanHabiba/next-js-ecommerce
+cd nextjs-ecommerce
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install  # or npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Set Up Environment Variables:
 
-## Learn More
+Create a `.env.local` file in the root directory and configure the required keys:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_STRAPI_TOKEN=<your_strapi_token>
+NEXT_PUBLIC_STRAPI_API_URL=<your_strapi_backend_url>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your_clerk_publishable_key>
+CLERK_SECRET_KEY=<your_clerk_secret_key>
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+NEXT_PUBLIC_STRIPE_PUBLISHER_KEY=<your_stripe_publishable_key>
+STRIPE_SECRET_KEY=<your_stripe_secret_key>
 
-## Deploy on Vercel
+RESEND_API_KEY=<your_resend_api_key>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Start the Development Server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+yarn dev  # or npm run dev
+```
+
+### 5. Access the Application:
+
+Once the server is running, open:
+
+```
+http://localhost:3000
+```
+
+## API Endpoints (Backend - Strapi)
+
+### Products
+
+- **Get all products:** `GET /api/products`
+- **Get a single product:** `GET /api/products/:id`
+
+### Carts
+
+- **Get user cart:** `GET /api/carts/:userId`
+- **Add item to cart:** `POST /api/carts`
+- **Remove item from cart:** `DELETE /api/carts/:id`
+
+### Orders
+
+- **Get user orders:** `GET /api/orders/:userId`
+- **Place an order:** `POST /api/orders`
+
+🔗 Strapi API Base URL: https://strapi-ecommerce-production-f8fb.up.railway.app/api
+
+## License
+
+This project is licensed under the **MIT License**.
+
