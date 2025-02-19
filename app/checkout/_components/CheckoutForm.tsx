@@ -66,7 +66,7 @@ const handleSubmit = async (event: React.FormEvent) => {
     const {paymentIntent, error} = await stripe.confirmPayment({
         elements,
         clientSecret,
-        confirmParams: {return_url: "http://localhost:3000/success"},
+        confirmParams: {return_url: "https://next-js-ecommerce-liard.vercel.app/success"},
     });
 
     if (error) {
