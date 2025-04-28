@@ -4,6 +4,8 @@
 
 This is a **fully dynamic** e-commerce application built with **Next.js** and powered by a **Strapi** backend. The platform allows users to browse programming courses, add them to their cart, and complete purchases using secure payment methods. The application provides a seamless shopping experience with a modern UI/UX.
 
+The application also uses **Context API** to manage global state across the application, making it easy to share data like user information, cart details, and orders throughout the app without the need for prop drilling or external state management libraries like Redux.
+
 ## Live Demo
 
 🔗 [Live Application](https://next-js-ecommerce-liard.vercel.app/)
@@ -12,6 +14,7 @@ This is a **fully dynamic** e-commerce application built with **Next.js** and po
 
 - **User Authentication:** Powered by **Clerk**, enabling account registration and login.
 - **Product Management:** Browse and purchase programming courses.
+- **Cart System:** Add and remove courses dynamically with state management via **Context API**.
 - **Cart System:** Add and remove courses dynamically.
 - **Secure Payments:** Integrated with **Stripe** for seamless transactions.
 - **Email Notifications:** Uses **React Email** to send order confirmations.
@@ -21,8 +24,9 @@ This is a **fully dynamic** e-commerce application built with **Next.js** and po
 ## Tech Stack
 
 - **Next.js** (App Router)
-- **Strapi** (Headless CMS Backend)
 - **TypeScript** (Strongly typed environment)
+- **Strapi** (Headless CMS Backend)
+- **Context API** (State Management)
 - **SQLite** (Database for Strapi)
 - **Clerk** (User authentication)
 - **Stripe** (Online payments)
