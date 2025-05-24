@@ -26,12 +26,12 @@ export interface Banner {
     url: string;
     width: number;
     height: number;
-    formats: {
+    formats: Partial<{
         thumbnail: ImageFormat;
         small: ImageFormat;
         medium: ImageFormat;
         large: ImageFormat;
-    };
+    }>;
 }
 
 export interface ImageFormat {

@@ -17,13 +17,12 @@ const ProductItem = ({ product }: ProductItemProps) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const img = new window.Image();
-    img.src = product.bannar.formats.large.url;
+    img.src = product?.bannar?.formats?.large?.url || "";
     img.onload = () => setLoading(false);
   }, [product]);
 
   return (
     <Card className="relative w-full max-w-sm min-w-[300px] p-0 overflow-hidden group cursor-pointer transition-all hover:-translate-y-2 border border-primary-dark/20 bg-glass mx-auto">
-      {/* Skeleton with dark theme and matching border radius */}
       {loading && (
         <div className="aspect-[16/10] w-full rounded-t-3xl overflow-hidden bg-bgdark flex items-center justify-center">
           <Skeleton
@@ -37,13 +36,12 @@ const ProductItem = ({ product }: ProductItemProps) => {
         </div>
       )}
       <Link href={`/product-details/${product?.id}`}>
-        {/* Image with fixed aspect ratio, object-cover, no padding, fills card */}
         <div
           className={`aspect-[16/10] w-full flex items-center justify-center overflow-hidden rounded-t-3xl bg-bgdark relative ${loading ? "hidden" : "block"}`}
         >
           <Image
             className="object-cover w-full h-full rounded-t-3xl"
-            src={product.bannar.formats.large.url}
+            src={product?.bannar?.formats?.large?.url || "" }
             alt={product.title}
             width={384}
             height={240}

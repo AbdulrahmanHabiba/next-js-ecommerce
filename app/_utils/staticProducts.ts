@@ -36,6 +36,27 @@ export const staticProducts: Product[] = [
           width: 1000,
           height: 500,
           size: 156.06
+        },
+        medium: {
+          name: "medium_C-Programming.png",
+          url: "https://res.cloudinary.com/dnvlh7gm3/image/upload/v1738242827/medium_C_Programming_faf7ffaf8f.png",
+          width: 750,
+          height: 375,
+          size: 100.00
+        },
+        small: {
+          name: "small_C-Programming.png",
+          url: "https://res.cloudinary.com/dnvlh7gm3/image/upload/v1738242827/small_C_Programming_faf7ffaf8f.png",
+          width: 500,
+          height: 250,
+          size: 50.00
+        },
+        thumbnail: {
+          name: "thumbnail_C-Programming.png",
+          url: "https://res.cloudinary.com/dnvlh7gm3/image/upload/v1738242827/thumbnail_C_Programming_faf7ffaf8f.png",
+          width: 245,
+          height: 123,
+          size: 10.00
         }
       }
     }
