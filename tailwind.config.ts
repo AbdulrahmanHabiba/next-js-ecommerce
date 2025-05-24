@@ -11,9 +11,30 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        secondary: "#4e9fff",
-        primary: "#513DEB",
-
+        // --- Premium Theme Colors ---
+        primary: {
+          DEFAULT: '#7f53ac', // main gradient start
+          dark: '#232946',   // dark background
+          light: '#e0e6f7',  // light text
+        },
+        secondary: {
+          DEFAULT: '#647dee', // main gradient end
+        },
+        accent: {
+          DEFAULT: '#e94560', // accent (danger, remove, etc)
+        },
+        bgdark: {
+          DEFAULT: '#181c2b', // background dark
+        },
+        glass: {
+          DEFAULT: 'rgba(255,255,255,0.10)', // glassmorphism
+        },
+        textmain: {
+          DEFAULT: '#e0e6f7', // main text
+        },
+        textmuted: {
+          DEFAULT: '#bfc9e0', // muted text
+        },
       },
     },
   },

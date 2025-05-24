@@ -28,8 +28,7 @@ const CheckoutForm = ({clientSecret, amount}: { clientSecret: string; amount: nu
                 await Promise.all(cart.map((item) => deleteCartItem(item.id)));
             }
         } catch (error) {
-            // @ts-ignore
-            console.error("Error creating order:", error?.response?.data || error);
+            // removed console.error
         }
     };
     const sendEmail = async (name: string, email: string) => {
@@ -48,7 +47,7 @@ const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     if (!stripe || !elements || !clientSecret) {
-        console.error("Stripe.js hasn't loaded or clientSecret is missing.");
+        // removed console.error
         return;
     }
 
@@ -58,7 +57,7 @@ const handleSubmit = async (event: React.FormEvent) => {
     await sendEmail(userName, userEmail);
     const {error: submitError} = await elements.submit();
     if (submitError) {
-        console.error("Error submitting elements:", submitError.message);
+        // removed console.error
         return;
     }
 
@@ -70,13 +69,11 @@ const handleSubmit = async (event: React.FormEvent) => {
     });
 
     if (error) {
-        console.error("Payment failed:", error.message);
+        // removed console.error
         return;
     }
 
-    if (paymentIntent?.status === "succeeded") {
-        console.log("Payment successful!");
-    }
+    // removed console.log
 };
 
 return (
